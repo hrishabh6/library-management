@@ -17,7 +17,7 @@ export const sendEmail = async ({email, subject, message} : {email : string , su
         provider: resend({ token: config.env.upstash.resendToken }),
       },
       body: {
-        from: "Hrishabh Joshi <updates.hrishabhjoshi.xyz>",
+        from: "Hrishabh Joshi <contact@hrishabhjoshi.xyz>",
         to: [email],
         subject: subject,
         html: message,

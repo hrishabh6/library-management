@@ -51,7 +51,7 @@ export const navigationLinks = [
   export const FIELD_TYPES = {
     fullname: "text",
     email: "email",
-    universityId: "number",
+    universityId: "text",
     password: "password",
   };
   

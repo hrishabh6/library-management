@@ -12,7 +12,7 @@ export const users = pgTable("users", {
   email: text("email").notNull().unique(),
   universityId: varchar("university_id", { length: 255 }).notNull().unique(),
   password : text("password").notNull(),
-  universitycard : text("university_card").notNull(),
+  universityCard : text("university_card").notNull(),
   status : STATUS_ENUM("status").default("PENDING"),
   role : ROLE_ENUM("role").default("USER"),
   lastActivityDate : date("last_activity_date").defaultNow(),

@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1737134621765,
+      "tag": "0000_overrated_wolfsbane",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1737186063222,
+      "tag": "0001_bouncy_felicia_hardy",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1737186865776,
+      "tag": "0002_tranquil_shard",
+      "breakpoints": true
+    }
+  ]
+}

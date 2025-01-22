@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -16,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input"
 import Link from 'next/link'
 import { FIELD_NAMES, FIELD_TYPES } from '@/constants'
-import ImageUpload from './ImageUpload'
+import FileUpload from './FileUpload'
 import { toast } from '@/hooks/use-toast'
 import { useRouter } from 'next/navigation'
 
@@ -72,7 +71,14 @@ const AuthForm = <T extends FieldValues>({ type, schema, defaultValues, onSubmit
                                     <FormItem>
                                         <FormLabel className='capitalize'>{FIELD_NAMES[field.name as keyof typeof FIELD_NAMES]}</FormLabel>
                                         <FormControl>
-                                            {field.name === "universityCard" ? <ImageUpload onFileChange={field.onChange}/>
+                                            {field.name === "universityCard" ?
+                                            <FileUpload 
+                                                type="image"
+                                                accept="image/*"
+                                                placeHolder="Upload your university ID card"
+                                                folder="university-cards"
+                                                variant="dark"
+                                                onFileChange={field.onChange}/>
                                                 :
                                                 <Input
                                                     required

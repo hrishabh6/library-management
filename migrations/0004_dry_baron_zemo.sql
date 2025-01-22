@@ -1,0 +1,1 @@
+ALTER TABLE "books" ADD COLUMN "available_copies" integer DEFAULT 0 NOT NULL;

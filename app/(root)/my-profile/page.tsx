@@ -1,5 +1,6 @@
 import { signOut } from '@/auth'
 import BookList from '@/components/BookList'
+import Profile from '@/components/Profile'
 import { Button } from '@/components/ui/button'
 import { sampleBooks } from '@/constants'
 import React from 'react'
@@ -13,7 +14,8 @@ const page = () => {
             }}>
                 <Button>Logout</Button>
             </form>
-            <BookList title="Borrowed Books" books={sampleBooks}/>
+            
+            <Profile/>
 
         </>
     )

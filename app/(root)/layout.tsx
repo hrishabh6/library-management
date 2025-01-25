@@ -7,31 +7,34 @@ import { redirect } from 'next/navigation'
 import { after } from 'next/server'
 import React from 'react'
 
-const layout = async ({children} : {children : React.ReactNode}) => {
-  
+const layout = async ({ children }: { children: React.ReactNode }) => {
+
   const session = await auth()
-      if (!session) {
-          redirect('/sign-in')
-      }
-  
-      after( async () => {
-        if (session?.user?.id) {
+  if (!session) {
+    redirect('/sign-in')
+  }
 
-          //get the user and see if the last acticity date is today
-          const user = await db.select().from(users).where(eq(users.id, session.user.id)).limit(1)
-          if(user[0].lastActivityDate === new Date().toISOString().slice(0, 10)) return
+  after(async () => {
+    if (session?.user?.id) {
 
-          await db.update(users).set({lastActivityDate : new Date().toISOString().slice(0, 10)}).where(eq(users.id, session.user.id))
-        }
-      })
+      //get the user and see if the last acticity date is today
+      const user = await db.select().from(users).where(eq(users.id, session.user.id)).limit(1)
+      if (user[0].lastActivityDate === new Date().toISOString().slice(0, 10)) return
+
+      await db.update(users).set({ lastActivityDate: new Date().toISOString().slice(0, 10) }).where(eq(users.id, session.user.id))
+    }
+  })
 
   return (
-    <main className='root-container'>
-      <div className='mx-auto max-w-7xl '>
-        <Header session={session}/>
-        <div className='mt-20 pb-20'> {children}</div>
-      </div>
-    </main>
+    <>
+      <main className='root-container'>
+      <Header session={session}/>
+        <div className='mx-auto max-w-7xl '>
+          <div className='mt-20 pb-20'> {children}</div>
+        </div>
+      </main>
+
+    </>
   )
 }
 

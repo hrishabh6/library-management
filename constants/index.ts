@@ -57,7 +57,7 @@ export const navigationLinks = [
   
   export const sampleBooks = [
     {
-      id: 1,
+      id: "1",
       title: "The Midnight Library",
       author: "Matt Haig",
       genre: "Fantasy / Fiction",
@@ -74,7 +74,7 @@ export const navigationLinks = [
       isLoaned: true,
     },
     {
-      id: 2,
+      id: "2",
       title: "Atomic Habits",
       author: "James Clear",
       genre: "Self-Help / Productivity",
@@ -90,7 +90,7 @@ export const navigationLinks = [
         "A revolutionary guide to making good habits, breaking bad ones, and getting 1% better every day.",
     },
     {
-      id: 3,
+      id: "3",
       title: "You Don't Know JS: Scope & Closures",
       author: "Kyle Simpson",
       genre: "Computer Science / JavaScript",
@@ -107,7 +107,7 @@ export const navigationLinks = [
         "An essential guide to understanding the core mechanisms of JavaScript, focusing on scope and closures.",
     },
     {
-      id: 4,
+      id: "4",
       title: "The Alchemist",
       author: "Paulo Coelho",
       genre: "Philosophy / Adventure",
@@ -124,7 +124,7 @@ export const navigationLinks = [
         "A magical tale of Santiago, an Andalusian shepherd boy, who embarks on a journey to find a worldly treasure.",
     },
     {
-      id: 5,
+      id: "5",
       title: "Deep Work",
       author: "Cal Newport",
       genre: "Self-Help / Productivity",
@@ -134,63 +134,13 @@ export const navigationLinks = [
       description:
         "Rules for focused success in a distracted world, teaching how to cultivate deep focus to achieve peak productivity.",
       coverColor: "#ffffff",
-      coverUrl: "https://m.media-amazon.com/images/I/81JJ7fyyKyS.jpg",
-      videoUrl: "/sample-video.mp4?updatedAt=1722593504152",
-      summary:
-        "Rules for focused success in a distracted world, teaching how to cultivate deep focus to achieve peak productivity.",
-    },
-    {
-      id: 6,
-      title: "Clean Code",
-      author: "Robert C. Martin",
-      genre: "Computer Science / Programming",
-      rating: 4.8,
-      totalCopies: 56,
-      availableCopies: 56,
-      description:
-        "A handbook of agile software craftsmanship, offering best practices and principles for writing clean and maintainable code.",
-      coverColor: "#080c0d",
-      coverUrl:
-        "https://m.media-amazon.com/images/I/71T7aD3EOTL._UF1000,1000_QL80_.jpg",
-      videoUrl: "/sample-video.mp4?updatedAt=1722593504152",
-      summary:
-        "A handbook of agile software craftsmanship, offering best practices and principles for writing clean and maintainable code.",
-    },
-    {
-      id: 7,
-      title: "The Pragmatic Programmer",
-      author: "Andrew Hunt, David Thomas",
-      genre: "Computer Science / Programming",
-      rating: 4.8,
-      totalCopies: 25,
-      availableCopies: 3,
-      description:
-        "A timeless guide for developers to hone their skills and improve their programming practices.",
-      coverColor: "#100f15",
-      coverUrl:
-        "https://m.media-amazon.com/images/I/71VStSjZmpL._AC_UF1000,1000_QL80_.jpg",
-      videoUrl: "/sample-video.mp4?updatedAt=1722593504152",
-      summary:
-        "A timeless guide for developers to hone their skills and improve their programming practices.",
-    },
-    {
-      id: 8,
-      title: "The Psychology of Money",
-      author: "Morgan Housel",
-      genre: "Finance / Self-Help",
-      rating: 4.8,
-      totalCopies: 10,
-      availableCopies: 5,
-      description:
-        "Morgan Housel explores the unique behaviors and mindsets that shape financial success and decision-making.",
-      coverColor: "#ffffff",
       coverUrl:
         "https://m.media-amazon.com/images/I/81Dky+tD+pL._AC_UF1000,1000_QL80_.jpg",
       videoUrl: "/sample-video.mp4?updatedAt=1722593504152",
       summary:
         "Morgan Housel explores the unique behaviors and mindsets that shape financial success and decision-making.",
-    },
-  ];
+    }
+  ]
   
   export const sorts = [
     {
